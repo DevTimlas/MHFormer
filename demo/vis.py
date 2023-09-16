@@ -281,7 +281,7 @@ if __name__ == "__main__":
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 
-    video_path = './demo/video/' + args.video
+    video_path = os.path.join(os.getcwd(), args.video) # './demo/video/' + args.video
     video_name = video_path.split('/')[-1].split('.')[0]
     output_dir = './demo/output/' + video_name + '/'
 

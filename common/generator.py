@@ -67,7 +67,7 @@ class ChunkedGenerator:
         self.out_all = out_all
 
     def num_frames(self):
-        return self.num_batches * self.batch_size
+        return (self.num_batches * self.batch_size) // 6
 
     def random_state(self):
         return self.random
